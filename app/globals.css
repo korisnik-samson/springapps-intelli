@@ -3,13 +3,204 @@
 @tailwind utilities;
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
     .text-balance {
         text-wrap: balance;
     }
+
+    /* CERAMIC PRIMARY */
+    .button-ceramic {
+        appearance: none;
+        background-color: #4D4AE8;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
+        border: 1px solid #4D4AE8;
+        border-radius: .6rem;
+        box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Inter, sans-serif;
+        text-align: center;
+        text-transform: none;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+    }
+
+    .button-ceramic:focus:not(:focus-visible),
+    .button-ceramic:focus {
+        outline: 0;
+    }
+
+    .button-ceramic:hover {
+        background-color: #3733E5;
+        border-color: #3733E5;
+    }
+
+    .button-ceramic:focus {
+        background-color: #413FC5;
+        border-color: #3E3BBA;
+        box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
+    }
+
+    .button-ceramic:active {
+        background-color: #3E3BBA;
+        background-image: none;
+        border-color: #3A38AE;
+        box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
+    }
+
+    .button-ceramic:active:focus {
+        box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
+    }
+
+    .button-ceramic:disabled {
+        background-image: none;
+        box-shadow: none;
+        opacity: .65;
+        pointer-events: none;
+    }
+
+    /* CERAMIC SECONDARY */
+    .button-ceramic-secondary {
+        appearance: none;
+        background-color: #6A6AED;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+        border: 1px solid #6A6AED;
+        border-radius: .6rem;
+        box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Inter, sans-serif;
+        text-align: center;
+        text-transform: none;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+    }
+
+    .button-ceramic-secondary:hover {
+        background-color: #5C5BED;
+        border-color: #5C5BED;
+    }
+
+    .button-ceramic-secondary:active {
+        background-color: #4F4FED;
+        border-color: #4B4BDE;
+        box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
+    }
+
+    /* CERAMIC DESTRUCTIVE */
+    .button-ceramic-destructive {
+        appearance: none;
+        background-color: #E84A4A;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+        border: 1px solid #E84A4A;
+        border-radius: .6rem;
+        box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Inter, sans-serif;
+        text-align: center;
+        text-transform: none;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+    }
+
+    .button-ceramic-destructive:hover {
+        background-color: #D33333;
+        border-color: #D33333;
+    }
+
+    .button-ceramic-destructive:active {
+        background-color: #BA2B2B;
+        border-color: #A52626;
+        box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
+    }
+
+    /* CERAMIC GHOST */
+    .button-ceramic-tertiary {
+        appearance: none;
+        background-color: transparent;
+        color: #6A6A6A; /* Subtle color for tertiary button */
+        border: 1px solid transparent;
+        border-radius: .6rem;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Inter, sans-serif;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+    }
+
+    .button-ceramic-tertiary:hover {
+        background-color: rgba(106, 106, 106, 0.1);
+        color: #4D4AE8; /* Accent color on hover */
+    }
+
+    .button-ceramic-tertiary:focus {
+        box-shadow: rgba(104, 101, 235, 0.3) 0 0 0 .2rem;
+    }
+
+    .button-ceramic-tertiary:disabled {
+        color: rgba(106, 106, 106, 0.5);
+        pointer-events: none;
+    }
+
+    /* CERAMIC TERITARY */
+    .button-ceramic-tertiary {
+        appearance: none;
+        background-color: transparent;
+        color: #6A6A6A; /* Subtle color for tertiary button */
+        border: 1px solid transparent;
+        border-radius: .6rem;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Inter, sans-serif;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+    }
+
+    .button-ceramic-tertiary:hover {
+        background-color: rgba(106, 106, 106, 0.1);
+        color: #4D4AE8; /* Accent color on hover */
+    }
+
+    .button-ceramic-tertiary:focus {
+        box-shadow: rgba(104, 101, 235, 0.3) 0 0 0 .2rem;
+    }
+
+    .button-ceramic-tertiary:disabled {
+        color: rgba(106, 106, 106, 0.5);
+        pointer-events: none;
+    }
+
 }
 
 @layer base {
