@@ -70,35 +70,59 @@ body {
     /* CERAMIC SECONDARY */
     .button-ceramic-secondary {
         appearance: none;
-        background-color: #6A6AED;
-        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-        border: 1px solid #6A6AED;
-        border-radius: .6rem;
-        box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px;
+        background-color: #E8E8E8; /* Whiter silver color */
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+        border: 1px solid #CCCCCC; /* Light silver border */
+        border-radius: 0.6rem;
+        box-shadow: rgba(255, 255, 255, 0.35) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px;
         box-sizing: border-box;
-        color: #FFFFFF;
+        color: #000000; /* Black text color */
         cursor: pointer;
         display: inline-block;
         font-family: Inter, sans-serif;
         text-align: center;
         text-transform: none;
-        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
         vertical-align: middle;
     }
 
+    .button-ceramic-secondary:focus:not(:focus-visible),
+    .button-ceramic-secondary:focus {
+        outline: 0;
+    }
+
     .button-ceramic-secondary:hover {
-        background-color: #5C5BED;
-        border-color: #5C5BED;
+        background-color: #DCDCDC; /* Slightly darker silver for hover */
+        border-color: #BEBEBE;
+    }
+
+    .button-ceramic-secondary:focus {
+        background-color: #D8D8D8; /* Slightly darker silver for focus */
+        border-color: #BEBEBE;
+        box-shadow: rgba(255, 255, 255, 0.35) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px, rgba(232, 232, 232, 0.5) 0 0 0 0.2rem;
     }
 
     .button-ceramic-secondary:active {
-        background-color: #4F4FED;
-        border-color: #4B4BDE;
+        background-color: #C8C8C8; /* Darker silver for active */
+        background-image: none;
+        border-color: #AFAFAF;
         box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
     }
+
+    .button-ceramic-secondary:active:focus {
+        box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset, rgba(232, 232, 232, 0.5) 0 0 0 0.2rem;
+    }
+
+    .button-ceramic-secondary:disabled {
+        background-image: none;
+        box-shadow: none;
+        opacity: 0.65;
+        pointer-events: none;
+    }
+
 
     /* CERAMIC DESTRUCTIVE */
     .button-ceramic-destructive {

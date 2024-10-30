@@ -5,21 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f164b-25ee-4e6e-8a53-61db2d5ed57f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/(auth)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/sign-in/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/sign-up/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/DottedSeparator.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/components/sign-in-card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/components/sign-up-card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/google_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/microsoft_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo-black.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo-blue_bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo-white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/fonts/GeistMonoVF.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/fonts/GeistVF.woff" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/calendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/calendar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/chart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/chart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/select.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/textarea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,6 +75,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Samson/OneDrive - samxhavier/Desktop/private_repos/springapps-intelli/features/auth/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,6 +94,18 @@
         <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\features\auth\components" />
+      <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public\images" />
+      <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public\icons" />
+      <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public\images" />
+      <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\app\(auth)" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Intelli Server" type="js.build_tools.npm">
@@ -101,7 +136,7 @@
       <updated>1730227034434</updated>
       <workItem from="1730227035214" duration="1350000" />
       <workItem from="1730229409346" duration="1210000" />
-      <workItem from="1730230663560" duration="9090000" />
+      <workItem from="1730230663560" duration="25831000" />
     </task>
     <servers />
   </component>
