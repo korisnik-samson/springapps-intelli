@@ -7,31 +7,33 @@ import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { FcGoogle } from "react-icons/fc";
-import { FaMicrosoft, FaGithub } from "react-icons/fa";
-import { signInFormSchema } from "@/lib/utils";
+import { FaGithub } from "react-icons/fa";
+import { loginSchema } from "@/lib/utils";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
+import Link from "next/link";
+import { useLogin } from "@/features/auth/api/use-login";
 
 export const SignInCard = () => {
+    const { mutate } = useLogin();
 
-    const form = useForm<z.infer<typeof signInFormSchema>>({
-        resolver: zodResolver(signInFormSchema),
+    const form = useForm<z.infer<typeof loginSchema>>({
+        resolver: zodResolver(loginSchema),
         defaultValues: {
             email: '',
             password: ''
         }
     });
 
-    const handleSubmit = (values: z.infer<typeof signInFormSchema>) => {
-        console.log({ values });
-
+    const handleSubmit = (values: z.infer<typeof loginSchema>) => {
         // TODO: Implement login logic - finish with Spring Backend
+        mutate(values);
     }
 
     return (
-        <Card className="w-full h-full md:w-[487px] md:h-[500px] border-none shadow-none">
+        <Card className="w-full h-full md:w-[487px] border-none shadow-none">
             <CardHeader className='flex items-center justify-center text-center p-7'>
                 <CardTitle className='text-2xl'>Welcome back!</CardTitle>
             </CardHeader>
@@ -86,6 +88,19 @@ export const SignInCard = () => {
                         Login with GitHub
                     </div>
                 </Button>
+            </CardContent>
+
+            <div className='px-7'>
+                <DottedSeparator />
+            </div>
+
+            <CardContent className='p-7 flex items-center justify-center'>
+                <p>
+                    Don&apos;t have an account?
+                    <Link href='/sign-up'>
+                        <span className='text-blue-700 cursor-pointer ml-1'>&nbsp;Sign Up</span>
+                    </Link>
+                </p>
             </CardContent>
         </Card>
     );

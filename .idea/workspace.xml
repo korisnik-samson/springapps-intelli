@@ -5,30 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f164b-25ee-4e6e-8a53-61db2d5ed57f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/(auth)/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/sign-in/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/sign-up/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/DottedSeparator.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/auth/components/sign-in-card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/auth/components/sign-up-card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/google_logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/microsoft_logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo-blue_bg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/[[...route]]/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/users/[userId]/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/query-provider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/api/use-login.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/api/use-register.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/server/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/server/users.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rpc.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/GeistMonoVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/GeistVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/components/sign-in-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/components/sign-in-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/components/sign-up-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/components/sign-up-card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -68,24 +61,26 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Samson/OneDrive - samxhavier/Desktop/private_repos/springapps-intelli/features/auth/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.Intelli Server.executor": "Run",
-    "ts.external.directory.path": "C:\\Users\\Samson\\OneDrive - samxhavier\\Desktop\\private_repos\\springapps-intelli\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Samson/OneDrive - samxhavier/Desktop/private_repos/springapps-intelli/app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Intelli Server.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Samson\\OneDrive - samxhavier\\Desktop\\private_repos\\springapps-intelli\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -97,6 +92,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\app" />
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\features\auth\components" />
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public\images" />
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public\icons" />
@@ -122,7 +118,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23726.96" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
       </set>
     </attachedChunks>
   </component>
@@ -136,11 +132,38 @@
       <updated>1730227034434</updated>
       <workItem from="1730227035214" duration="1350000" />
       <workItem from="1730229409346" duration="1210000" />
-      <workItem from="1730230663560" duration="25831000" />
+      <workItem from="1730230663560" duration="27415000" />
+      <workItem from="1730321179675" duration="28000" />
+      <workItem from="1730321219225" duration="987000" />
+      <workItem from="1730329057352" duration="9620000" />
+      <workItem from="1730517193274" duration="12832000" />
+      <workItem from="1730584282538" duration="960000" />
+      <workItem from="1730826037116" duration="649000" />
+      <workItem from="1730905758059" duration="600000" />
+      <workItem from="1733405532265" duration="1444000" />
+      <workItem from="1733407428710" duration="608000" />
+      <workItem from="1733636003121" duration="90000" />
+      <workItem from="1733636164688" duration="1368000" />
+      <workItem from="1733746919920" duration="11944000" />
+      <workItem from="1734001261604" duration="1008000" />
+      <workItem from="1734186024679" duration="60000" />
+      <workItem from="1735731459782" duration="30000" />
+      <workItem from="1736716997892" duration="770000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import "./globals.css";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { cn } from "@/lib/utils";
+import { QueryProvider } from "@/components/query-provider";
 
 const inter: NextFont = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
         <html lang="en">
             <body className={cn('antialiased min-h-screen ', inter.className)}>
-                {children}
+                <QueryProvider>
+                    {children}
+                </QueryProvider>
             </body>
         </html>
     );
