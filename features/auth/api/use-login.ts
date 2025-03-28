@@ -8,7 +8,7 @@ type RequestType = InferRequestType<typeof client.api.auth.login['$post']>['json
 export const useLogin = () => {
     return useMutation<ResponseType, Error, RequestType>({
 
-        mutationFn: async (body) => {
+        mutationFn: async (body): Promise<{ message: string }> => {
             const response = await client.api.auth.login.$post({ json: body });
 
             return response.json();

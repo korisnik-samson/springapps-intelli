@@ -30,6 +30,7 @@ export const SignUpCard = () => {
 
     const handleSubmit = (values: z.infer<typeof registerSchema>) => {
         // TODO: Implement registration logic - finish with Spring Backend
+        // console.log({ values });
         mutate(values);
     }
 

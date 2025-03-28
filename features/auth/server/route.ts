@@ -2,10 +2,8 @@ import { Hono } from 'hono';
 import { zValidator } from "@hono/zod-validator";
 import { loginSchema, registerSchema } from "@/lib/utils";
 
-const app = new Hono()
-.post(
+const app = new Hono().post(
     '/login',
-
     // middleware to validate the request body
     zValidator('json', loginSchema),
 
@@ -17,7 +15,6 @@ const app = new Hono()
     }
 ).post(
     '/register',
-
         // middleware to validate the request body
         zValidator('json', registerSchema),
 
