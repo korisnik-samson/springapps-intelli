@@ -17,6 +17,9 @@ export const loginSchema = z.object({
     password: z.string().min(8, 'Password requires 8 characters').max(256, 'Characters limit exceeded')
 });
 
+export function loginDuration(duration: number): number {
+    return Number(60 * 60 * 24 * duration)
+}
 
 export function splitString(input: string): { name: string, lastname: string } {
     const [first, ...rest] = input.split(' ');

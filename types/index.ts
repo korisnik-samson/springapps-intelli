@@ -12,3 +12,25 @@ export interface DottedSeparatorProps {
     gapSize?: string;
     direction?: 'horizontal' | 'vertical';
 }
+
+export interface LoginCredentials {
+    username: string;
+    password: string;
+}
+
+export type RegisterCredentials = {
+    name: string;
+    username: string;
+    password: string;
+}
+
+export type LoginResponse = {
+    token: string;
+    success: boolean;
+    message?: string;
+}
+
+export type RegisterResponse = {
+    success: boolean;
+    message?: string;
+}

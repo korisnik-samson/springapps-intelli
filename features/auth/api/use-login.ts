@@ -11,6 +11,8 @@ export const useLogin = () => {
         mutationFn: async (body): Promise<{ message: string }> => {
             const response = await client.api.auth.login.$post({ json: body });
 
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             return response.json();
         },
 
