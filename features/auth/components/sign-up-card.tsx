@@ -15,9 +15,11 @@ import { registerSchema } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { useRegister } from "@/features/auth/api/use-register";
+import { useToast } from "@/hooks/use-toast";
 
 export const SignUpCard = () => {
     const { mutate } = useRegister();
+    const { toast } = useToast();
 
     const form = useForm<z.infer<typeof registerSchema>>({
         resolver: zodResolver(registerSchema),
@@ -31,6 +33,11 @@ export const SignUpCard = () => {
     const handleSubmit = (values: z.infer<typeof registerSchema>) => {
         // TODO: Implement registration logic - finish with Spring Backend
         // console.log({ values });
+        toast({
+            title: "We're adding your info...",
+            description: "Just a sec, we're refreshing our servers.",
+        })
+        
         mutate(values);
     }
 

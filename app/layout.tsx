@@ -5,6 +5,7 @@ import "./globals.css";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { cn } from "@/lib/utils";
 import { QueryProvider } from "@/components/query-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter: NextFont = Inter({ subsets: ['latin'] })
 
@@ -19,10 +20,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en">
-            <body className={cn('antialiased min-h-screen ', inter.className)}>
+            <body className={cn('antialiased min-h-screen', inter.className)}>
                 <QueryProvider>
                     {children}
                 </QueryProvider>
+                
+                <Toaster />
             </body>
         </html>
     );

@@ -34,3 +34,9 @@ export type RegisterResponse = {
     success: boolean;
     message?: string;
 }
+
+export type ContextType = {
+    Variables: {
+        JWT_Token: string;
+    };
+}

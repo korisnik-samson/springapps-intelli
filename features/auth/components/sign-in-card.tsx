@@ -11,6 +11,7 @@ import { FaGithub } from "react-icons/fa";
 import { loginSchema } from "@/lib/utils";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { useToast } from "@/hooks/use-toast"
 
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import Link from "next/link";
@@ -18,6 +19,8 @@ import { useLogin } from "@/features/auth/api/use-login";
 
 export const SignInCard = () => {
     const { mutate } = useLogin();
+    
+    const { toast } = useToast();
 
     const form = useForm<z.infer<typeof loginSchema>>({
         resolver: zodResolver(loginSchema),
@@ -29,6 +32,12 @@ export const SignInCard = () => {
 
     const handleSubmit = (values: z.infer<typeof loginSchema>) => {
         // TODO: Implement login logic - finish with Spring Backend
+        
+        toast({
+            title: "We're signing you in...",
+            description: "Just a sec, we're checking our servers.",
+        })
+        
         mutate(values);
     }
 

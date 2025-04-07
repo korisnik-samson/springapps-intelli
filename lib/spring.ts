@@ -4,9 +4,8 @@
 
 // It is used to handle login and registration requests.
 
-import { cookies } from "next/headers";
 import { LoginCredentials, LoginResponse, RegisterCredentials, RegisterResponse } from "@/types";
-import { loginDuration, splitString } from "@/lib/utils";
+import { splitString } from "@/lib/utils";
 
 export async function userLogin(credentials: LoginCredentials): Promise<LoginResponse> {
     try {
@@ -26,14 +25,9 @@ export async function userLogin(credentials: LoginCredentials): Promise<LoginRes
             };
         }
         
-        const data = await response.text()
+        const data = await response.text();
         
-        cookies().set('jwtToken', data, {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
-            maxAge: loginDuration(7), // 1 week
-        });
+        // TODO: Remove the JWT token being visible in the console
         
         return {
             success: true,

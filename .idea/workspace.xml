@@ -5,11 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f164b-25ee-4e6e-8a53-61db2d5ed57f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MobileSidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Navigation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SideBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/api/use-current.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/components/user-button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/schemas.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/constants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/session.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/[[...route]]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/[[...route]]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/users/[userId]/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DottedSeparator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DottedSeparator.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/auth/api/use-login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/api/use-login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/components/sign-in-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/components/sign-in-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/components/sign-up-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/components/sign-up-card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/auth/server/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/server/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/server/users.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/spring.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/spring.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -40,6 +63,9 @@
     &quot;accountId&quot;: &quot;80ed2e29-dd23-4c01-b9f8-82c82863b691&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/hono/dist/types/types.d.ts" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -61,12 +87,14 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Samson/OneDrive - samxhavier/Desktop/private_repos/springapps-intelli/app&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.Intelli Server.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\sammi\\Desktop\\repositories\\springapps-intelli\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -89,6 +117,7 @@
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sammi\Desktop\repositories\springapps-intelli\app\dashboard" />
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public\images" />
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\app\(auth)" />
     </key>
@@ -153,7 +182,20 @@
       <workItem from="1742999317696" duration="812000" />
       <workItem from="1743154956014" duration="5254000" />
       <workItem from="1743161396841" duration="10876000" />
-      <workItem from="1743182135660" duration="6852000" />
+      <workItem from="1743182135660" duration="14781000" />
+      <workItem from="1743246196394" duration="2555000" />
+      <workItem from="1743350928535" duration="13850000" />
+      <workItem from="1743410277938" duration="12856000" />
+      <workItem from="1743507999363" duration="19233000" />
+      <workItem from="1743591578448" duration="15141000" />
+      <workItem from="1743757886224" duration="47000" />
+      <workItem from="1743757958711" duration="2423000" />
+      <workItem from="1743774503127" duration="1488000" />
+      <workItem from="1743783016194" duration="2916000" />
+      <workItem from="1743785990200" duration="3969000" />
+      <workItem from="1743860237904" duration="788000" />
+      <workItem from="1743879887246" duration="1256000" />
+      <workItem from="1744013738483" duration="6187000" />
     </task>
     <servers />
   </component>
