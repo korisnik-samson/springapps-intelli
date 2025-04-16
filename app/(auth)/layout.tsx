@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 const AuthLayout = ({ children }: AuthLayoutProps) => {
     const pathname = usePathname();
     const isSignIn = pathname === '/sign-in';
-
+    
     return (
         <main className='bg-neutral-100 min-h-screen'>
             <div className='mx-auto max-w-screen-2xl p-4'>

@@ -1,6 +1,7 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 import { z } from "zod";
+import { JwtPayload } from "jsonwebtoken";
 
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs))
@@ -29,5 +30,18 @@ export function splitString(input: string): { name: string, lastname: string } {
     return {
         name: temp[0],
         lastname: temp[1]
+    }
+}
+
+export function isJWTValid(token: string | JwtPayload): boolean {
+    try {
+        const payload = token.split('.')[1];
+        const decodedPayload = JSON.parse(atob(payload));
+        const exp = decodedPayload.exp;
+
+        return Date.now() < exp * 1000;
+        
+    } catch (error) {
+        return false;
     }
 }

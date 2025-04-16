@@ -1,4 +1,5 @@
 import React from 'react';
+import { Secret } from "jsonwebtoken";
 
 export interface AuthLayoutProps {
     children: React.ReactNode;
@@ -39,4 +40,20 @@ export type ContextType = {
     Variables: {
         JWT_Token: string;
     };
+}
+
+export type UserObject = {
+    user_id: string;
+    firstName: string;
+    lastName: string;
+    username: string;
+    email: string;
+    password: string;
+    role: "MEMBER" | "ADMIN";
+}
+
+export type RequestResponse = {
+    user?: UserObject;
+    success: boolean;
+    message?: string;
 }

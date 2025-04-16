@@ -5,6 +5,7 @@ import { userLogin, userRegister } from "@/lib/spring";
 import { LoginResponse, RegisterResponse } from "@/types";
 import { deleteCookie, setCookie } from "hono/cookie";
 import { sessionMiddleware } from "@/lib/middleware";
+import {  } from "jsonwebtoken"
 
 const app = new Hono().post('/login',
     // middleware to validate the request body
@@ -30,7 +31,7 @@ const app = new Hono().post('/login',
                 secure: process.env.NODE_ENV === 'production',
                 sameSite: 'strict',
                 maxAge: loginDuration(14),
-                domain: process.env.NEXT_PUBLIC_USER_SERVICE_URL,
+                //domain: process.env.NEXT_PUBLIC_USER_SERVICE_URL,
             }
         )
 
@@ -63,7 +64,6 @@ const app = new Hono().post('/login',
     
 ).post('/logout', sessionMiddleware,
     async (context) => {
-        
         // Clear the JWT token in cookies
         deleteCookie(context, 'JWT_Token');
 
@@ -72,11 +72,11 @@ const app = new Hono().post('/login',
     
 ).get('/current', sessionMiddleware, 
     async (context) => {
-        const user = context.get('jwtPayload');
+        const user = context.get('user');
         
         console.log({ user });
     
-        return user ? context.json({ user: user }) : context.json({ message: 'No user found' });
+        return user ? context.json({ user: user }) : context.json({ message: 'No user found' }, 404);
     }
 );
 

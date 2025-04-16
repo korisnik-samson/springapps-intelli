@@ -5,32 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f164b-25ee-4e6e-8a53-61db2d5ed57f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/MobileSidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Navigation.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SideBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/auth/actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/auth/api/use-current.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/auth/components/user-button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/auth/schemas.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/session.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/azure-secrets.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/[[...route]]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/[[...route]]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/users/[userId]/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DottedSeparator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DottedSeparator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(dashboard)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/api/use-current.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/api/use-current.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/auth/api/use-login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/api/use-login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/auth/components/sign-in-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/components/sign-in-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/auth/components/sign-up-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/components/sign-up-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/components/user-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/components/user-button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/auth/server/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/server/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/auth/server/users.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/session.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/spring.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/spring.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
@@ -43,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -66,6 +52,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/node_modules/hono/dist/types/types.d.ts" root0="SKIP_INSPECTION" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -85,6 +74,7 @@
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Samson/OneDrive - samxhavier/Desktop/private_repos/springapps-intelli/app&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -122,7 +112,10 @@
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\app\(auth)" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.Intelli Server">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
     <configuration name="Intelli Server" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -137,7 +130,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
       </set>
     </attachedChunks>
   </component>
@@ -195,7 +188,19 @@
       <workItem from="1743785990200" duration="3969000" />
       <workItem from="1743860237904" duration="788000" />
       <workItem from="1743879887246" duration="1256000" />
-      <workItem from="1744013738483" duration="6187000" />
+      <workItem from="1744013738483" duration="19205000" />
+      <workItem from="1744050329409" duration="6411000" />
+      <workItem from="1744140334695" duration="1491000" />
+      <workItem from="1744637278798" duration="30000" />
+      <workItem from="1744637318454" duration="2943000" />
+      <workItem from="1744640817325" duration="913000" />
+      <workItem from="1744644689380" duration="746000" />
+      <workItem from="1744753547288" duration="3102000" />
+      <workItem from="1744782433599" duration="20127000" />
+      <workItem from="1744825749167" duration="6000" />
+      <workItem from="1744826243348" duration="694000" />
+      <workItem from="1744827328132" duration="24000" />
+      <workItem from="1744827360726" duration="1177000" />
     </task>
     <servers />
   </component>

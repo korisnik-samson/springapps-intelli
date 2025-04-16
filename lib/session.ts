@@ -1,7 +1,7 @@
 'use client';
 
 export const getSessionFromResponse = (response: Response) =>{
-    const sessionHeader = response.headers.get('X-Session-User');
+    const sessionHeader = response.headers.get('user');
 
     if (!sessionHeader) return null;
 

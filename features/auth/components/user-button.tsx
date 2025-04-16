@@ -2,12 +2,13 @@
 
 import { Loader, LogOut } from "lucide-react";
 
-import { Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import { Avatar, AvatarFallback} from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 import { DottedSeparator } from "@/components/DottedSeparator";
 import { useCurrent } from "@/features/auth/api/use-current";
 import { tempUser } from "@/lib/constants";
+import { UserObject } from "@/types";
 
 export const UserButton = () => {
     const { data: user, isLoading } = useCurrent();
@@ -25,7 +26,7 @@ export const UserButton = () => {
             </div>
         );
     }
-
+    
     const initials = tempUser?.name.charAt(0).toUpperCase() + tempUser.name.split(' ')[1].charAt(0).toUpperCase();
 
     return (

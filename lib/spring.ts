@@ -4,7 +4,7 @@
 
 // It is used to handle login and registration requests.
 
-import { LoginCredentials, LoginResponse, RegisterCredentials, RegisterResponse } from "@/types";
+import { LoginCredentials, LoginResponse, RegisterCredentials, RegisterResponse, RequestResponse, UserObject } from "@/types";
 import { splitString } from "@/lib/utils";
 
 export async function userLogin(credentials: LoginCredentials): Promise<LoginResponse> {
@@ -79,6 +79,42 @@ export async function userRegister(credentials: RegisterCredentials): Promise<Re
         
     } catch (error) {
         console.error(`Registration failed: \n${error}`);
+        
+        return {
+            success: false,
+            message: error instanceof Error ? error.message : 'An unknown error occurred',
+        };
+    }
+}
+
+export async function getUserFromUsername(username: string | (() => string) | undefined, token: string): Promise<RequestResponse> {
+    try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_USER_SERVICE_URL!}/api/users/${username}`, {
+            method: 'GET',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+        })
+        
+        if (!response.ok) {
+            const error = await response.json().catch((_) => {});
+            
+            return {
+                success: false,
+                message: `User retrieval failed with status ${response.status} --> ${error?.message || 'Unknown error'}`,
+            };
+        }
+        
+        const data: UserObject = await response.json();
+        
+        return {
+            success: true,
+            user: data,
+        };
+        
+    } catch (error) {
+        console.error(`User retrieval failed: \n${error}`);
         
         return {
             success: false,
