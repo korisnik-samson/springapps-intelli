@@ -11,17 +11,11 @@ export const getCurrentUser = async () => {
         const token = cookies().get('JWT_Token')?.value;
         if (!token) return null;
 
-        const jwtSecret: KeyVaultSecret = await getSecret(process.env.JWT_SECRET_NAME!);
-        
-        const decoded = verify(token, jwtSecret.value!) as UserObject;
-        if (!decoded) return null;
-        
-        return {
-            id: decoded.user_id,
-            name: decoded.username,
-            email: decoded.email,
-            role: decoded.role,
-        };
+        // verify and decode the token to get the username and validity
+        // if valid then get the user
+
+        // const user = getUserByUsername(username, token)
+        // return the user
         
     } catch (error) {
         console.error('Error fetching current user:', error);
