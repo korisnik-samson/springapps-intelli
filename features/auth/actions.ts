@@ -10,7 +10,7 @@ export const getCurrentUser = async () => {
     try {
         const token = cookies().get('JWT_Token')?.value;
         if (!token) return null;
-
+        // secret key from Azure might be needed too
         // verify and decode the token to get the username and validity
         // if valid then get the user
 
