@@ -72,11 +72,13 @@ const app = new Hono().post('/login',
     
 ).get('/current', sessionMiddleware, 
     async (context) => {
-        const user = context.get('user');
+        const user = context.get('user' as never);
         
         console.log({ user });
-    
-        return user ? context.json({ user: user }) : context.json({ message: 'No user found' }, 404);
+
+        return user
+            ? context.json({ user: user })
+            : context.json({ message: 'No user found' }, 404);
     }
 );
 

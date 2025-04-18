@@ -2,7 +2,6 @@ import { createMiddleware } from "hono/factory";
 import { getCookie } from "hono/cookie";
 import { getUserFromUsername } from "@/lib/spring";
 import { verify } from "jsonwebtoken";
-//import { verify } from "hono/jwt"
 import { isJWTValid } from "@/lib/utils";
 import { getSecret } from "@/lib/azure-secrets";
 import { KeyVaultSecret } from "@azure/keyvault-secrets";
@@ -12,7 +11,7 @@ export const sessionMiddleware = createMiddleware(
         const token = getCookie(context, 'JWT_Token');
         if (!token) return context.json({ message: 'No token provided' }, 401);
 
-        // obtain the JWT token from Azure Key Vault
+        // get the JWT token from Azure Key Vault
         const jwtSecret: KeyVaultSecret = await getSecret(process.env.JWT_SECRET_NAME!);
         console.log({ jwtSecret });
 
@@ -31,7 +30,7 @@ export const sessionMiddleware = createMiddleware(
         });
         
         if (isJWTValid(decodedToken)) return context.json({ message: 'Invalid or expired token' }, 401);
-
+ 
         const user = await getUserFromUsername(decodedToken.sub, token);
         if (!user) return context.json({ message: 'User not found' }, 404);
 
@@ -39,4 +38,4 @@ export const sessionMiddleware = createMiddleware(
 
         await next();
     }
-);
+); 

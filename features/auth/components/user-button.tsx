@@ -7,16 +7,20 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 
 import { DottedSeparator } from "@/components/DottedSeparator";
 import { useCurrent } from "@/features/auth/api/use-current";
-import { tempUser } from "@/lib/constants";
 import { UserObject } from "@/types";
+import { truncateEmail } from "@/lib/utils";
+import { useLogout } from "@/features/auth/api/use-logout";
+import { useRouter } from "next/navigation";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 export const UserButton = () => {
     const { data: user, isLoading } = useCurrent();
-    // const { mutate: logout } = useLogin()
+    const { mutate: logout } = useLogout();
+    const router: AppRouterInstance = useRouter();
     
-    const handleLogout = () => {
-        // logout()
-        // router.push('/auth/login')
+    const handleLogout = (): void => {
+        logout()
+        router.push('/sign-in')
     }
     
     if (isLoading) {
@@ -27,7 +31,14 @@ export const UserButton = () => {
         );
     }
     
-    const initials = tempUser?.name.charAt(0).toUpperCase() + tempUser.name.split(' ')[1].charAt(0).toUpperCase();
+    if (!user) return null
+    
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    const { user_id, firstName, lastName, username, email, password } = user.data.user.user as UserObject;
+    
+    //const tempInitials = tempUser?.name.charAt(0).toUpperCase() + tempUser.name.split(' ')[1].charAt(0).toUpperCase();
+    const initials = firstName.charAt(0).toUpperCase() + lastName.charAt(0).toUpperCase();
 
     return (
         <DropdownMenu modal={false}>
@@ -48,8 +59,8 @@ export const UserButton = () => {
                     </Avatar>
                     
                     <div className='flex flex-col items-center justify-center'>
-                        <p>{tempUser.name}</p>
-                        <p className='text-xs text-neutral-500'>{tempUser.email}</p>
+                        <p>{firstName}{' '}{lastName}</p>
+                        <p className='text-xs text-neutral-500'>{truncateEmail(email)}</p>
                     </div>
                 </div>
                 

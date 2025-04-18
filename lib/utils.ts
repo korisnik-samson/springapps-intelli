@@ -45,3 +45,10 @@ export function isJWTValid(token: string | JwtPayload): boolean {
         return false;
     }
 }
+
+export function truncateEmail(email: string): string {
+    const [username, domain] = email.split('@');
+    const truncatedUsername = username.length > 15 ? `${username.slice(0, 15)}...${username.slice(-3)}` : username;
+    
+    return `${truncatedUsername}@${domain}`;
+}

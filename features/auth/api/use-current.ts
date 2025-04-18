@@ -1,7 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-
 import { client } from '@/lib/rpc';
-import { getSessionFromResponse } from "@/lib/session";
 
 export const useCurrent = () => {
     return useQuery({
@@ -10,14 +8,13 @@ export const useCurrent = () => {
         queryFn: async () => {
             const response = await client.api.auth.current.$get();
             if (!response.ok) throw new Error('Failed to fetch current user');
-
-            // const sessionUser = getSessionFromResponse(response);
-            // if (sessionUser) return { user: sessionUser };
             
-            return await response.json();
+            const data = await response.json();
+            console.log({ data });
+            
+            return { data };
         },
         
         retry: false,
-        refetchOnWindowFocus: false,
     });
 }
