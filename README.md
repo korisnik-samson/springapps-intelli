@@ -34,3 +34,32 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Deploy on Azure VM
+
+### Git & SSH Setup
+
+```bash
+    sudo apt install git -y 
+    
+    git config --global user.name 'myusername'
+    git config --global user.email 'myemail'
+    
+    ssh-keygen -t ed25519 -C "myemail"
+```
+
+### Node.js & NPM Setup
+
+```bash
+    # Download and install fnm:
+    curl -o- https://fnm.vercel.app/install | bash
+    
+    # Download and install Node.js:
+    fnm install 23
+    
+    # Verify the Node.js version:
+    node -v # Should print "v23.11.0".
+    
+    # Verify npm version:
+    npm -v # Should print "10.9.2".
+```

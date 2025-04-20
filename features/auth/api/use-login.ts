@@ -33,6 +33,7 @@ export const useLogin = () => {
 
             // Redirect to dashboard
             router.push('/');
+            // router.refresh();
         },
         
         onError: (error) => {

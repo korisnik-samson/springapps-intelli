@@ -5,6 +5,24 @@ import { verify } from "jsonwebtoken";
 import { isJWTValid } from "@/lib/utils";
 import { getSecret } from "@/lib/azure-secrets";
 import { KeyVaultSecret } from "@azure/keyvault-secrets";
+import { NextRequest, NextResponse } from "next/server";
+
+export function middleware(request: NextRequest) {
+    const response = NextResponse.next();
+
+    // Set CORS headers
+    response.headers.set('Access-Control-Allow-Origin', 'http://intelliwebapp.westeurope.cloudapp.azure.com');
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    response.headers.set('Access-Control-Allow-Credentials', 'true');
+
+    return response;
+}
+
+export const config = {
+    matcher: '/api/:path*',
+};
+
 
 export const sessionMiddleware = createMiddleware(
     async (context, next) => {

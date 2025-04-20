@@ -13,9 +13,8 @@ export const getCurrentUser = async () => {
         
         // get Secret from Azure Key Vault
         const jwtSecret: KeyVaultSecret = await getSecret(process.env.JWT_SECRET_NAME!);
-        console.log({ jwtSecret });
 
-        if (!jwtSecret.value) {
+        if (!jwtSecret.value) { 
             console.error(`Secret ${process.env.JWT_SECRET_NAME} retrieved but has no value.`);
             return null;
         }
@@ -23,7 +22,7 @@ export const getCurrentUser = async () => {
         // verify and decode the token to get the username and validity
         const decodedToken = verify(
             token,
-            Buffer.from(jwtSecret.value, 'base64'), {
+            Buffer.from(jwtSecret.value, 'base64'), { 
             algorithms: ['HS256']
         });
 
