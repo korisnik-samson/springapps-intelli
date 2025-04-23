@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f164b-25ee-4e6e-8a53-61db2d5ed57f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/features/auth/workspaces/components/WorkspaceForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/workspaces/schemas.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/workspaces/server/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth)/sign-in/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/sign-in/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/auth/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/auth/api/use-login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/api/use-login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/auth/api/use-logout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/api/use-logout.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(dashboard)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/[[...route]]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/[[...route]]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -99,6 +100,7 @@
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sammi\Desktop\repositories\springapps-intelli\features\auth\workspaces\server" />
       <recent name="C:\Users\sammi\Desktop\repositories\springapps-intelli\app\dashboard" />
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public\images" />
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\app\(auth)" />
@@ -201,6 +203,9 @@
       <workItem from="1744969800249" duration="3134000" />
       <workItem from="1744973021466" duration="4158000" />
       <workItem from="1745048048803" duration="4278000" />
+      <workItem from="1745316492429" duration="6631000" />
+      <workItem from="1745423393463" duration="15000" />
+      <workItem from="1745423420037" duration="2194000" />
     </task>
     <servers />
   </component>

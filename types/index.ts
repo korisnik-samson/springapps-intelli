@@ -57,3 +57,8 @@ export type RequestResponse = {
     success: boolean;
     message?: string;
 }
+
+export interface WorkspaceFormProps {
+    onCancel?: () => void;
+    onSubmit?: (values: any) => void;
+}
