@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query";
+import { QueryClient, useMutation, useQueryClient } from "@tanstack/react-query";
 import { InferRequestType, InferResponseType } from "hono";
 import { client } from "@/lib/rpc";
 import { useRouter } from "next/navigation";
@@ -6,18 +6,19 @@ import { useToast } from "@/hooks/use-toast";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { LoginResponse } from "@/types";
 
-type ResponseType = InferResponseType<typeof client.api.auth.login['$post']>;
+type ResponseType = InferResponseType<typeof client.api.workspaces.create['$post']>;
 
-type RequestType = InferRequestType<typeof client.api.auth.login['$post']>['json'];
+type RequestType = InferRequestType<typeof client.api.workspaces.create['$post']>['json'];
 
-export const useLogin = () => {
-    const router: AppRouterInstance = useRouter();
+export const useCreateWorkspace = () => {
     const { toast } = useToast();
+    const router: AppRouterInstance = useRouter();
+    const queryClient = useQueryClient();
     
     return useMutation<ResponseType, Error, RequestType, LoginResponse>({
 
         mutationFn: async (body): Promise<ResponseType> => {
-            const response = await client.api.auth.login.$post({ json: body });
+            const response = await client.api.workspaces.create.$post({ json: body });
             
             if (!response.ok) {
                 const error = await response.json().catch((_) => {});
@@ -27,27 +28,32 @@ export const useLogin = () => {
             return response.json();
         },
         
-        onSuccess: async (data: LoginResponse) => {
-            if (data.token) localStorage.setItem('JWT_Token', data.token);
+        onSuccess: async () => {
+
+            //router.refresh();
+            /*if (data.token) localStorage.setItem('JWT_Token', data.token);
 
             // Show success toast
-            toast({
-                title: "Login successful!",
-                description: "Welcome back to the dashboard.",
-            });
 
             // Redirect to dashboard
             router.push('/');
-            // router.refresh();
+            
+            // router.refresh();*/
+            toast({
+                title: "Project created successfully!",
+                description: "Welcome to your new workspace.",
+            });
+            
+            await queryClient.invalidateQueries({ queryKey: ['projects'] });
         },
         
         onError: (error) => {
             // Show error toast
             toast({
-                title: "Login failed",
-                description: "Please check your credentials and try again.",
+                title: "Project creation failed",
                 variant: "destructive",
             });
         }
+
     });
 };

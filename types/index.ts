@@ -62,3 +62,24 @@ export interface WorkspaceFormProps {
     onCancel?: () => void;
     onSubmit?: (values: any) => void;
 }
+
+export interface ProjectObject {
+    id?: string;
+    name: string;
+    description: string;
+    createdAt?: Date | string;
+    updatedAt?: Date | string;
+    status?: string;
+    createdBy: string;
+}
+
+export type ProjectResponse = {
+    project?: ProjectObject;
+    success: boolean;
+    message?: string;
+}
+
+export interface ProjectParseObject {
+    projects: ProjectObject[];
+    
+}

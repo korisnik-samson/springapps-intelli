@@ -9,6 +9,8 @@
     "rules": {
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": "off",
-        "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off",
+        "eslint-disable-next-line @typescript-eslint/ban-ts-comment": "off",
+        "@ts-expect-error": "off"
     }
 }

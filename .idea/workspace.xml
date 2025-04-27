@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006f164b-25ee-4e6e-8a53-61db2d5ed57f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/features/auth/workspaces/components/WorkspaceForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/auth/workspaces/schemas.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/auth/workspaces/server/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/WorkspaceSwitcher.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/workspaces/api/use-create-workspace.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/auth/workspaces/api/use-get-workspaces.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/[[...route]]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/[[...route]]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(dashboard)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SideBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SideBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/api/use-login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/api/use-login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/api/use-logout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/api/use-logout.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/workspaces/components/WorkspaceForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/workspaces/components/WorkspaceForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/workspaces/schemas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/workspaces/schemas.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/auth/workspaces/server/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/auth/workspaces/server/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/spring.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +76,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Samson/OneDrive - samxhavier/Desktop/private_repos/springapps-intelli/app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sammi/Desktop/repositories/springapps-intelli/features/auth/workspaces/api&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -77,7 +85,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.Intelli Server.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\sammi\\Desktop\\repositories\\springapps-intelli\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -93,11 +101,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sammi\Desktop\repositories\springapps-intelli\features\auth\workspaces\api" />
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\app" />
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\features\auth\components" />
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public\images" />
       <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public\icons" />
-      <recent name="C:\Users\Samson\OneDrive - samxhavier\Desktop\private_repos\springapps-intelli\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sammi\Desktop\repositories\springapps-intelli\features\auth\workspaces\server" />
@@ -205,7 +213,13 @@
       <workItem from="1745048048803" duration="4278000" />
       <workItem from="1745316492429" duration="6631000" />
       <workItem from="1745423393463" duration="15000" />
-      <workItem from="1745423420037" duration="2194000" />
+      <workItem from="1745423420037" duration="2885000" />
+      <workItem from="1745443281073" duration="3527000" />
+      <workItem from="1745585118646" duration="15370000" />
+      <workItem from="1745647496621" duration="1626000" />
+      <workItem from="1745649637709" duration="7117000" />
+      <workItem from="1745691863831" duration="9925000" />
+      <workItem from="1745760336221" duration="1836000" />
     </task>
     <servers />
   </component>

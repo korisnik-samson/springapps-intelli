@@ -6,6 +6,7 @@ import { isJWTValid } from "@/lib/utils";
 import { getSecret } from "@/lib/azure-secrets";
 import { KeyVaultSecret } from "@azure/keyvault-secrets";
 import { NextRequest, NextResponse } from "next/server";
+import { ProjectObject } from "@/types";
 
 export function middleware(request: NextRequest) {
     const response = NextResponse.next();
@@ -22,7 +23,6 @@ export function middleware(request: NextRequest) {
 export const config = {
     matcher: '/api/:path*',
 };
-
 
 export const sessionMiddleware = createMiddleware(
     async (context, next) => {
@@ -41,7 +41,7 @@ export const sessionMiddleware = createMiddleware(
         // TODO: Resolve the secret from Azure Key Vault being in sync with the JWT token
         
         //Verify the JWT token
-        const  decodedToken = verify(
+        const decodedToken = verify(
             token, 
             Buffer.from(jwtSecret!.value, 'base64'), {
             algorithms: ['HS256']
@@ -52,8 +52,24 @@ export const sessionMiddleware = createMiddleware(
         const user = await getUserFromUsername(decodedToken.sub, token);
         if (!user) return context.json({ message: 'User not found' }, 404);
 
+        // here we're only verifying the token and getting the user from the database
         context.set('user', user);
 
         await next();
     }
 ); 
+
+export const projectsMiddleware = createMiddleware(
+    async (context, next) => {
+        // get the projects from the server
+        const response: Response = await fetch(`${process.env.NEXT_PUBLIC_LOCAL_PROJECT_SERVICE_URL!}/api/projects`);
+        
+        const projects: ProjectObject[] = await response.json();
+        
+        if (!projects) return context.json({ message: 'No projects found' }, 404);
+        
+        context.set('projects', projects);
+        
+        await next();
+    }
+);

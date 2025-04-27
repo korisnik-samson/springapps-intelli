@@ -13,7 +13,11 @@ export const useLogout = () => {
         
         mutationFn: async () => {
             const response = await client.api.auth.logout.$post();
-            if (!response.ok) throw new Error('Failed to logout');
+            
+            if (!response.ok) {
+                const error = await response.json().catch((_) => {});
+                throw new Error(error?.message || 'Failed to logout');
+            }
             
             return await response.json() as ResponseType;
         },
@@ -26,6 +30,7 @@ export const useLogout = () => {
             // Invalidate the current user query to refetch the user
             await queryClient.invalidateQueries({ queryKey: ['user'] });
         },
+        
     });
     
     return {
