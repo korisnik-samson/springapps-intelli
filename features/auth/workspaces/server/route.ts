@@ -49,8 +49,7 @@ const app = new Hono().post('/create',
     }
 ).get('/', sessionMiddleware,
     async (context) => {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
+
         const token = getCookie(context, 'JWT_Token');
         
         //const projects = context.get('projects') as ProjectObject[];
