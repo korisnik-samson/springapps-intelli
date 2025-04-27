@@ -27,8 +27,8 @@ export const useLogin = () => {
             return response.json();
         },
         
-        onSuccess: async (data: LoginResponse) => {
-            if (data.token) localStorage.setItem('JWT_Token', data.token);
+        onSuccess: async () => {
+            //if (data.token) localStorage.setItem('JWT_Token', data.token);
 
             // Show success toast
             toast({
@@ -38,7 +38,6 @@ export const useLogin = () => {
 
             // Redirect to dashboard
             router.push('/');
-            // router.refresh();
         },
         
         onError: (error) => {

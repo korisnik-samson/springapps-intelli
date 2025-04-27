@@ -4,7 +4,8 @@
 
 // It is used to handle login and registration requests.
 
-import { LoginCredentials, LoginResponse, ProjectObject, ProjectResponse, RegisterCredentials, RegisterResponse, RequestResponse, UserObject } from "@/types";
+import { LoginCredentials, LoginResponse, ProjectObject, ProjectResponse, 
+    RegisterCredentials, RegisterResponse, RequestResponse, UserObject } from "@/types";
 import { splitString } from "@/lib/utils";
 
 export async function userLogin(credentials: LoginCredentials): Promise<LoginResponse> {
